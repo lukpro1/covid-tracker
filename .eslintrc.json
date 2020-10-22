@@ -15,6 +15,12 @@
         "extensions": [".js", ".jsx"]
       }
     ],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "max-len": [
       "warn",
       {
@@ -26,9 +32,11 @@
         "ignoreUrls": true,
         "ignoreStrings": true,
         "ignoreTemplateLiterals": true,
-        "ignoreRegExpLiterals": true
+        "ignoreRegExpLiterals": true,
+        "no-unused-vars": "warning"
       }
     ],
-    "newline-per-chained-call": [true, 0]
+    "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
+    "linebreak-style": 1
   }
 }
